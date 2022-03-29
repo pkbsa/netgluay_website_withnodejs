@@ -1,0 +1,198 @@
+/* Set Universal font and Background*/       
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(25,25,25);
+} 
+body{
+    background-color: rgb(25,25,25);
+}
+/******************/
+
+/* Set Main */
+button{
+    font-size: 20px;
+    background:#2581aa; 
+    border:1px solid rgb(25, 25, 25);
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 30px; 
+    width: 180px;
+    height: 65px;
+    color: rgb(255, 255, 255); 
+    position: relative;
+    z-index: 100;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+h1{
+    font-size: 70px;
+    color: #FDFEFE;
+    margin-bottom: 0px;
+    width: 840px;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), #333);
+    -webkit-background-clip: text;
+    position: relative;
+    z-index: 3;
+}
+p{
+    color: #a8acac;
+    margin-top: 30px;
+    font-size: 25px;
+    width: 640px;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), #333);
+    -webkit-background-clip: text;
+    position: relative;
+    z-index: 3;
+}
+img{
+    background-color: black ;
+}
+/******************/
+
+/* Set Nav Bar*/  
+nav {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow:hidden;
+}
+nav a {
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+nav a:hover{
+    color:white;
+}
+#getstart {
+    padding-top: 0px;
+    padding-right: 0px;
+}
+#logo {
+    margin: 20px 50px;
+    padding-top: 0px;
+    padding-right: 0px;
+    position: relative;
+    z-index: 100;
+}
+#headlogin{
+    position: relative;
+    z-index: 100;
+}
+/******************/
+
+/* Set Container */
+.container {
+    margin: 80px 50px;
+    width: 840px;
+}
+.column{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    overflow:hidden;
+}
+
+.poster{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 3;
+}
+.belowbutton{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+button.login{
+    background:rgb(25, 25, 25); 
+    color:rgb(255, 255, 255); 
+    border:1px solid rgb(255, 255, 255);
+}
+.getstart{
+    margin-right: 20px;
+}
+.abovebutton{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.abovebutton button{
+    color:black;
+    background-color: white;
+}
+.abovebutton button:hover{
+    background-color: #d84630;
+    color: rgb(255, 255, 255);
+    border-color: rgb(25,25,25);
+}
+/******************/
+
+/* Set Footer */
+footer{
+    padding-left: 50px;
+    margin-top: 200px;
+    width: 100%;
+    position: absolute;
+    border-top: 5px solid rgb(120, 120, 120);
+    position: relative;
+    z-index: 3;
+}
+footer p{
+    font-size: 18px;
+}
+.foot{
+    display: flex;
+    flex-direction: row;
+}
+.foot a{
+    padding-right: 150px;
+    color: rgb(120, 120, 120);
+}
+#last{
+    font-size: 1rem;
+    margin-top: 16px;
+    color: rgb(120, 120, 120);
+}
+/******************/
+
+/*Background */
+.clouds{
+    background:transparent url(https://i.imgur.com/oJ38omT.png) repeat top center;
+    z-index:2;
+    opacity: .4;
+    animation:move-clouds-back 200s linear infinite;
+}
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+.stars, .twinkling{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+}
+.stars {
+    background:#000 url(https://i.imgur.com/KcMzYVG.png) repeat top center;
+    z-index:0;
+}
+.twinkling{
+    background:transparent url(https://i.imgur.com/YNko34k.png) repeat top center;
+    z-index:1;
+    animation:move-twink-back 200s linear infinite;
+}
+/******************/

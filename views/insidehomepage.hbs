@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home | NetGluay</title>
+        <link rel="icon" href="https://i.imgur.com/iPZltqj.png" type="image/png">
+         <!-- Required meta tags -->
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="insidehomepage.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="mainview">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="leftnav">
+                    <a href="/browse"><img id="logo" src="https://i.imgur.com/jcpK4JC.png" alt="logo" ></a>
+                    <a href="/browse" class="text">HOME</a>
+                    <a href="/movies" class="text">MOVIES</a>
+                    <a href="/series" class="text">SERIES</a>
+                    <a href="/watch" class="text">MY LIST</a>
+                </div>
+                <div class="rightnav">
+                    <div id="searchbar">
+                        <form method="POST" action="/result">
+                            <input class="submit_on_enter" type="text" name="search" id="search" placeholder="Search...">
+                        </form>
+                    </div>
+                    <a href="#" id="noti"><img src="https://i.imgur.com/PQWFgxD.png" alt="notifybell"></a>
+                    <a href="/profile" id="pfp"><img src="https://i.imgur.com/9S77aYT.jpg" alt="profilepicture"></a>
+                </div>
+            </nav>
+            <!-- Poster Button -->
+            <div class="mainbut">
+                <button id="watch" onclick="location.href='/rampage_2020'"><img src="https://i.imgur.com/VzZAnEV.png" alt="playlogo">WATCH</button>
+                <button id="list"><img src="https://i.imgur.com/dQX8xSO.png" alt="pluslogo">ADD LIST</button>
+            </div>
+        </div>
+
+        <!-- Main Button Filter -->
+        <div class="First">
+            <div class="myBtnContainer" id="myBtnContainer">
+                <button class="btn active" onclick="filterFirst('trend')"><img src="https://i.imgur.com/Yg64JUY.png" alt="trendlogo">Trends Now</button>
+                <button class="btn" onclick="filterFirst('popular')"><img src="https://i.imgur.com/Qfvauhe.png" alt="firelogo">Popular</button>
+                <button class="btn" onclick="filterFirst('rating')"><img src="https://i.imgur.com/plj7MYE.png" alt="starlogo">Most Rating</button>
+                <button class="btn" onclick="filterFirst('recent')"><img src="https://i.imgur.com/dQX8xSO.png" alt="pluslogo">Recently Added</button>
+            </div>
+            <hr/>
+            <!-- Category Button Filter -->
+            <div class="genrecontainer" id="myBtnContainer1">
+                <button class="btn1 active1 " onclick="filterSecond('all')"> All</button>
+                <button class="btn1" onclick="filterSecond('action')"> Action</button>
+                <button class="btn1" onclick="filterSecond('adventure')"> Adventure</button>
+                <button class="btn1" onclick="filterSecond('animation')"> Animation</button>
+                <button class="btn1" onclick="filterSecond('scifi')"> Sci-Fi</button>
+                <button class="btn1" onclick="filterSecond('comedy')"> Comedy</button>
+                <button class="btn1" onclick="filterSecond('horror')"> Horror</button>
+                <button class="btn1" onclick="filterSecond('drama')"> Drama</button>
+            </div>
+            <!-- Content inside container-->
+            <div class="container">
+                <div class="filterDiv trend horror"><a href="/scream_2022"><img src="https://i.imgur.com/Tzq8LcT.jpg" alt="scream"><p>Scream</p><p class="year">2022</p></a></div>
+                <div class="filterDiv trend adventure trend action"><a href="/eternal_2021"><img src="https://i.imgur.com/DalFjH2.jpg" alt="eternal"><p>Eternals</p><p class="year">2021</p></a></div>
+                <div class="filterDiv trend drama trend comedy"><a href="/dontlookup_2021"><img src="https://i.imgur.com/s19DEJb.jpg" alt="dontlookup"><p>Don't Look Up</p><p class="year">2021</p></a></div>
+                <div class="filterDiv trend action trend adventure"><a href="/spiderman_2021"><img src="https://i.imgur.com/yhYqMEo.jpg" alt="spiderman"><p>Spider-Man: No...</p><p class="year">2021</p></a></div>
+                <div class="filterDiv trend drama"><img src="https://i.imgur.com/BzmitHe.jpg" alt="potd"><p>The Power of the Dog</p><p class="year">2021</p></div>
+                <div class="filterDiv trend drama"><img src="https://i.imgur.com/Te4GhZe.jpg" alt ="tld"><p>The Lost Daughter</p><p class="year">2021</p></div> 
+                <div class="filterDiv trend action trend scifi"><img src="https://i.imgur.com/j61bQGd.jpg" alt="thematrix"><p>The Matrix Res...</p><p class="year">2021</p></div> 
+                <div class="filterDiv trend animation trend adventure trend comedy"><img src="https://i.imgur.com/OvEqgPD.jpg" alt="encanto"><p>Encanto</p><p class="year">2021</p></div> 
+                <div class="filterDiv popular action popular adventure"><img src="https://i.imgur.com/yhYqMEo.jpg" alt="spiderman"><p>Spider-Man: No...</p><p class="year">2021</p></div>
+                <div class="filterDiv popular action popular adventure popular drama"><img src="https://i.imgur.com/hk8LNui.jpg" alt="dune"><p>Dune</p><p class="year">2021</p></div>
+                <div class="filterDiv popular action popular scifi"><img src="https://i.imgur.com/hmMATy5.jpg" alt="Matrix"><p>The Matrix</p><p class="year">1999</p></div>
+                <div class="filterDiv popular action popular adventure popular drama"><img src="https://i.imgur.com/EgK4Lxm.jpg" alt="Endgame"><p>Avengers: Endgame</p><p class="year">2019</p></div>
+                <div class="filterDiv popular drama"><img src="https://i.imgur.com/B32LXFn.jpg" alt="Shawshank"><p>The Shawshank Rede..</p><p class="year">1994</p></div>
+                <div class="filterDiv popular drama"><img src="https://i.imgur.com/DKUVnjX.jpg" alt="GodFather"><p>The GodFather</p><p class="year">1972</p></div>
+                <div class="filterDiv popular adventure"><img src="https://i.imgur.com/VVfrsOJ.jpg" alt="Potter"><p>Harry Potter and ...</p><p class="year">2011</p></div>
+                <div class="filterDiv popular action popular drama"><img src="https://i.imgur.com/OoBQwPA.jpg" alt="Batman"><p>The Dark Knight</p><p class="year">2008</p></div> 
+                <div class="filterDiv rating drama"><img src="https://i.imgur.com/9GN7cnU.jpg" alt="Jai"><p>Jai Bhim</p><p class="year">2021</p></div>
+                <div class="filterDiv rating drama"><img src="https://i.imgur.com/B32LXFn.jpg" alt="Shawshank"><p>The Shawshank Rede..</p><p class="year">1994</p></div>
+                <div class="filterDiv rating drama"><img src="https://i.imgur.com/DKUVnjX.jpg" alt="GodFather"><p>The GodFather</p><p class="year">1972</p></div>
+                <div class="filterDiv rating action rating drama"><img src="https://i.imgur.com/OoBQwPA.jpg" alt="Batman"><p>The Dark Knight</p><p class="year">2008</p></div>
+                <div class="filterDiv rating drama"><img src="https://i.imgur.com/lDF2w0J.jpg" alt="GodFather"><p>The GodFather II</p><p class="year">1974</p></div>
+                <div class="filterDiv rating action rating adventure rating scifi"><img src="https://i.imgur.com/KbCkFCh.jpg" alt="inception"><p>Inception</p><p class="year">2010</p></div>
+                <div class="filterDiv rating drama"><img src="https://i.imgur.com/SLmY7Vu.jpg" alt="fight"><p>Fight Club</p><p class="year">1999</p></div>
+                <div class="filterDiv rating drama"><img src="https://i.imgur.com/hk8LNui.jpg" alt="Forrest"><p>Forrest Gump</p><p class="year">1994</p></div>
+                <div class="filterDiv recent action recent adventure"><img src="https://i.imgur.com/yhYqMEo.jpg" alt="spiderman"><p>Spider-Man: No...</p><p class="year">2021</p></div>
+                <div class="filterDiv recent drama"><img src="https://i.imgur.com/9GN7cnU.jpg" alt="Jai"><p>Jai Bhim</p><p class="year">2021</p></div>
+                <div class="filterDiv recent action recent adventure recent drama"><img src="https://i.imgur.com/2PFgxn2.jpg" alt="Dune"><p>Dune</p><p class="year">2021</p></div>
+                <div class="filterDiv recent animation recent action recent adventure "><img src="https://i.imgur.com/AfHjq00.jpg" alt="Demon"><p>Demon Slayer: Mug..</p><p class="year">2020</p></div>
+                <div class="filterDiv recent drama"><img src="https://i.imgur.com/0rd85Ok.jpg" alt="Hamilton"><p>Hamilton</p><p class="year">2020</p></div>
+                <div class="filterDiv recent drama"><img src="https://i.imgur.com/HncSERf.jpg" alt="Father"><p>The Father</p><p class="year">2020</p></div>
+                <div class="filterDiv recent action recent drama"><img src="https://i.imgur.com/uefujL3.jpg" alt="1917"><p>1917</p><p class="year">2019</p></div>
+                <div class="filterDiv recent animation recent adventure recent comedy"><img src="https://i.imgur.com/MViwvll.jpg" alt="Klaus"><p>Klaus</p><p class="year">2019</p></div>
+            </div>
+        </div>
+         <!-- Main Button Filter -->
+        <div class="Second">
+            <div class="myBtnContainer2" id="myBtnContainer2">
+                <button class="btn2 active2" onclick="filterFirst1('movies')" id="movies"><img src="https://i.imgur.com/D780WWh.png" alt="movielogo">Movies</button>
+                <button class="btn2" onclick="filterFirst1('series')" id="series"><img src="https://i.imgur.com/Hdbz1zu.png" alt="serieslogo">Series</button>
+                <button class="btn2" onclick="filterFirst1('ori')"><img src="https://i.imgur.com/2nnsJaZ.png" alt="ticklogo">Original Series</button>
+                <button class="btn2" onclick="filterFirst1('watch')" id="recently"><img src="https://i.imgur.com/H6fw2Sq.png" alt="timelogo">Recently Watch</button>
+            </div>
+            <hr/>
+            <!-- Category Button Filter -->
+            <div class="genrecontainer" id="myBtnContainer3">
+                <button class="btn3 active3 " onclick="filterSecond1('all1')"> All</button>
+                <button class="btn3" onclick="filterSecond1('action')"> Action</button>
+                <button class="btn3" onclick="filterSecond1('adventure')"> Adventure</button>
+                <button class="btn3" onclick="filterSecond1('animation')"> Animation</button>
+                <button class="btn3" onclick="filterSecond1('scifi')"> Sci-Fi</button>
+                <button class="btn3" onclick="filterSecond1('comedy')"> Comedy</button>
+                <button class="btn3" onclick="filterSecond1('horror')"> Horror</button>
+                <button class="btn3" onclick="filterSecond1('drama')"> Drama</button>
+            </div>
+            <!-- Content inside container-->
+            <div class="container">
+                <!-- Movies -->
+                <div class="filterDiv1 movies action movies adventure"><img src="https://i.imgur.com/DalFjH2.jpg" alt="eternal"><p>Eternals</p><p class="year">2021</p></div>
+                <div class="filterDiv1 movies drama movies comedy"><img src="https://i.imgur.com/s19DEJb.jpg" alt="dontlookup"><p>Don't Look Up</p><p class="year">2021</p></div>
+                <div class="filterDiv1 movies drama"><img src="https://i.imgur.com/BzmitHe.jpg" alt="power"><p>The Power of the Dog</p><p class="year">2021</p></div>
+                <div class="filterDiv1 movies drama"><img src="https://i.imgur.com/Te4GhZe.jpg" alt="lost"><p>The Lost Daughter</p><p class="year">2021</p></div> 
+                <div class="filterDiv1 movies action movies scifi"><img src="https://i.imgur.com/j61bQGd.jpg" alt="matrix"><p>The Matrix Res...</p><p class="year">2021</p></div> 
+                <div class="filterDiv1 movies action movies drama"><img src="https://i.imgur.com/AQZzNCz.jpg" alt="duel"><p>The Last Duel</p><p class="year">2021</p></div> 
+                <div class="filterDiv1 movies drama"><img src="https://i.imgur.com/UATzwsZ.jpg" alt="Tragedy"><p>The Tragedy of..</p><p class="year">2021</p></div> 
+                <div class="filterDiv1 movies animation movies adventure movies comedy"><img src="https://i.imgur.com/MViwvll.jpg" alt="Klaus"><p>Klaus</p><p class="year">2019</p></div> 
+                <!-- Series -->
+                <div class="filterDiv1 series action series adventure series drama"><img src="https://i.imgur.com/RK1Seq1.jpg" alt="Witcher"><p>The Witcher</p><p class="year">2019</p></div>
+                <div class="filterDiv1 series action series adventure series animation"><img src="https://i.imgur.com/nagmR1B.jpg" alt="Arcane"><p>Arcane</p><p class="year">2021</p></div>
+                <div class="filterDiv1 series action series adventure series drama"><img src="https://i.imgur.com/l2Avpdw.jpg" alt="wheel"><p>Wheel of Time</p><p class="year">2021</p></div>
+                <div class="filterDiv1 series action series adventure"><img src="https://i.imgur.com/PFVmg3d.jpg" alt="Hawkeye"><p>Hawkeye</p><p class="year">2021</p></div>
+                <div class="filterDiv1 series drama series horror"><img src="https://i.imgur.com/Edcwagg.jpg" alt="Yellowjackets"><p>Yellowjackets</p><p class="year">2021</p></div>
+                <div class="filterDiv1 series drama series adventure"><img src="https://i.imgur.com/dUjju9K.jpg" alt="Station"><p>Station Eleven</p><p class="year">2021</p></div>
+                <div class="filterDiv1 series comedy series drama"><img src="https://i.imgur.com/INNkImS.jpg" alt="Landscapers"><p>Landscapers</p><p class="year">2021</p></div>
+                <div class="filterDiv1 series drama"><img src="https://i.imgur.com/YHMzh4s.jpg" alt="Lucifer"><p>Lucifer</p><p class="year">2016</p></div> 
+                <!-- Original Series -->
+                <div class="filterDiv1 ori animation ori action ori adventure"><img src="https://i.imgur.com/gO62Lnb.jpg" alt="dota"><p>Dota: Dragon's Blood</p><p class="year">2021</p></div>
+                <div class="filterDiv1 ori action ori adventure"><img src="https://i.imgur.com/0rYEcYg.jpg" alt="iron"><p>Iron fist</p><p class="year">2017</p></div>
+                <div class="filterDiv1 ori animation ori action"><img src="https://i.imgur.com/XtD7F0n.jpg" alt="fast"><p>Fast & Furious S..</p><p class="year">2019</p></div>
+                <div class="filterDiv1 ori"><img src="https://i.imgur.com/sEgKmQS.jpg" alt="f1"><p>Formula 1: Dri..</p><p class="year">2019</p></div>
+                <div class="filterDiv1 ori drama ori horror"><img src="https://i.imgur.com/lv0t8b0.jpg" alt="Archive"><p>Archive 81</p><p class="year">2022</p></div>
+                <div class="filterDiv1 ori comedy ori drama"><img src="https://i.imgur.com/r4jszjM.jpg" alt="afterlife"><p>After Life</p><p class="year">2019</p></div>
+                <div class="filterDiv1 ori drama"><img src="https://i.imgur.com/K8mgJYG.jpg" alt="Ozark"><p>Ozark</p><p class="year">2017</p></div>
+                <div class="filterDiv1 ori drama"><img src="https://i.imgur.com/5ClFFrk.jpg" alt="anna"><p>Inventing Anna</p><p class="year">2022</p></div>
+                <!-- Recently Watch -->
+                <div class="filterDiv1 watch drama watch horror"><img src="https://i.imgur.com/Edcwagg.jpg" alt="Yellowjackets"><p>Yellowjackets</p><p class="year">2021</p></div>
+                <div class="filterDiv1 watch drama"><img src="https://i.imgur.com/0rd85Ok.jpg" alt="Hamilton"><p>Hamilton</p><p class="year">2020</p></div>
+                <div class="filterDiv1 watch drama watch comedy"><img src="https://i.imgur.com/s19DEJb.jpg" alt="dontlookup"><p>Don't Look Up</p><p class="year">2021</p></div>
+            </div>
+        </div>
+        <script src="insidehomepage.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.submit_on_enter').keydown(function(event) {
+                // enter has keyCode = 13, change it if you want to use another button
+                if (event.keyCode == 13) {
+                    this.form.submit();
+                    return false;
+                }
+                });
+            });
+        </script>
+        <!-- Footer -->
+        <footer>
+            <p>Questions? Call 085-525-9987</p>
+            <div class="foot">
+                <a href="aboutus.html">About Us</a>
+                <a href="https://www.instagram.com/gluaymunchkin/">Media Center</a>
+                <a href="https://docs.google.com/document/d/1Emkizw4NjYM3ZJ_2SDLUSP2LAr7rbd9DRSwANRjqZ4g/edit">Jobs</a>
+                <a href="pagelink.html">Table of contents</a>
+            </div>
+            <p id="last"> NETGLUAY Thailand </p>
+        </footer>
+    </body>
+</html>
